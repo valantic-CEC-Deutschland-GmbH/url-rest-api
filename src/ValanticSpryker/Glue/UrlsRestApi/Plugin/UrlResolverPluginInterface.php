@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Pyz\Glue\UrlsRestApi\Plugin;
+namespace ValanticSpryker\Glue\UrlsRestApi\Plugin;
 
 use Generated\Shared\Transfer\RestUrlResolverAttributesTransfer;
 use Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface;
