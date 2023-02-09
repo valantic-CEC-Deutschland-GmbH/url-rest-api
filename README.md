@@ -1,8 +1,8 @@
-# your package
+# urls-rest-api
 
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.4-8892BF.svg)](https://php.net/)
 
- - Adds spryker xxx to yyy
+ - Allows/Adds extension for url-resolver plugins [[plugins](Glue/UrlsRestApi/Plugin/UrlResolverPluginInterface.php)]  to /url-resolver endpoint
 
 ## Integration
 
