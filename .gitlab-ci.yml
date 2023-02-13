@@ -5,7 +5,7 @@ stages:
   - deploy
   - post-test
 
-composer:coverage:
+tests:coverage:
   stage: validation
   script:
     - composer validate
@@ -21,7 +21,7 @@ composer:coverage:
     reports:
       coverage_report:
         coverage_format: cobertura
-        path: tests/_output/cobertura.xml
+        path: coverage.cobertura.xml
       junit: tests/_output/coverage.xml
 
 pages:
