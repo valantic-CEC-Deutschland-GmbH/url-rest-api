@@ -24,8 +24,8 @@ composer:validate:
     reports:
       coverage_report:
         coverage_format: cobertura
-        path: cobertura.xml
-      junit: coverage.xml
+        path: tests/_output/cobertura.xml
+      junit: tests/_output/coverage.xml
 
 deploy:composer:
   stage: deploy
