@@ -10,6 +10,7 @@ tests:coverage:
   script:
     - apt-get update && apt-get install -y nodejs && apt-get clean
     - node -v
+    - npm -v
 #    - composer validate
 #    - composer install
 #    - composer cs-check
