@@ -33,7 +33,6 @@ pages:
     - master
 
 tagging:
-  stage: publish
 #  only:
 #    - master
   script:
