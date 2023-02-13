@@ -5,7 +5,7 @@ stages:
   - deploy
   - post-test
 
-composer:validate:
+composer:coverage:
   stage: validation
   script:
     - composer validate
