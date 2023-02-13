@@ -32,6 +32,17 @@ pages:
   only:
     - master
 
+tagging:
+  stage: publish
+#  only:
+#    - master
+  script:
+    - git config --global user.name "${GITLAB_USER_NAME}"
+    - git config --global user.email "${GITLAB_USER_EMAIL}"
+    - tag=$(cat composer.json | grep version | grep -Eo "[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+")
+    - git tag "$tag"
+    - git push --tags http://root:$ACCESS_TOKEN@$CI_SERVER_HOST/$CI_PROJECT_PATH.git HEAD:master
+
 deploy:composer:
   stage: deploy
   script:
