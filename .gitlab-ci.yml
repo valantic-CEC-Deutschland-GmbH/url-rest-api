@@ -15,6 +15,7 @@ composer:validate:
     - composer test
     - ls tests/_output
     - mv tests/_output/coverage/ public/
+    - cp tests/_output/cobertura.xml .
   coverage: '/^\s*Lines:\s*\d+.\d+\%/'
   artifacts:
     paths:
@@ -23,7 +24,7 @@ composer:validate:
     reports:
       coverage_report:
         coverage_format: cobertura
-        path: tests/_output/cobertura.xml
+        path: cobertura.xml
       junit: tests/_output/coverage.xml
 
 deploy:composer:
