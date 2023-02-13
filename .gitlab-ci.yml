@@ -31,6 +31,7 @@ release:
     - apt-get update && apt-get install -y --no-install-recommends git-core ca-certificates
     - npm install -g semantic-release @semantic-release/gitlab
   script:
+    - env
     - semantic-release
 #  rules:
 #    - if: $CI_COMMIT_BRANCH == "master"
