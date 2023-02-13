@@ -12,8 +12,8 @@ tests:coverage:
     - composer install
     - composer cs-check
     - composer md-check
-    - composer stan
     - composer test
+    - composer stan
   coverage: '/^\s*Lines:\s*\d+.\d+\%/'
   artifacts:
     expire_in: 30 days
