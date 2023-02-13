@@ -19,11 +19,6 @@ tests:coverage:
     expire_in: 30 days
     paths:
       - tests/_output/
-    reports:
-      coverage_report:
-        coverage_format: cobertura
-        path: coverage.cobertura.xml
-      junit: tests/_output/coverage.xml
 
 pages:
   image: ruby:2.7
