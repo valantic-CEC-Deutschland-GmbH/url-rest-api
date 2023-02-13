@@ -6,58 +6,32 @@ stages:
   - post-test
   - release
 
-#tests:coverage:
-#  stage: validation
-#  script:
-#    - apt-get update && apt-get install -y nodejs && apt-get clean
-#    - node -v
-#    - npm -v
-#    - composer validate
-#    - composer install
-#    - composer cs-check
-#    - composer md-check
-#    - composer test
-#    - composer stan
-#  coverage: '/^\s*Lines:\s*\d+.\d+\%/'
-#  artifacts:
-#    expire_in: 30 days
-#    paths:
-#      - tests/_output/
-
-release:
-  image: node:18
-  stage: release
-  before_script:
-    - apt-get update && apt-get install -y --no-install-recommends git-core ca-certificates
-    - npm install -g semantic-release @semantic-release/gitlab
+tests:coverage:
+  stage: validation
   script:
-    - env
-    - semantic-release
-#  rules:
-#    - if: $CI_COMMIT_BRANCH == "master"
+    - composer validate
+    - composer install
+    - composer cs-check
+    - composer md-check
+    - composer test
+    - composer stan
+  coverage: '/^\s*Lines:\s*\d+.\d+\%/'
+  artifacts:
+    expire_in: 30 days
+    paths:
+      - tests/_output/
 
-#pages:
-#  image: ruby:2.7
-#  stage: deploy
-#  script:
-#    - "mv tests/_output/coverage/ public/"
-#  artifacts:
-#    expire_in: 30 days
-#    paths:
-#      - public
-#  only:
-#    - master
-
-#tagging:
-##  only:
-##    - master
-#  stage: deploy
-#  script:
-#    - git config --global user.name "${GITLAB_USER_NAME}"
-#    - git config --global user.email "${GITLAB_USER_EMAIL}"
-#    - tag=$(cat composer.json | grep version | grep -Eo "[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+")
-#    - git tag "$tag"
-#    - git push --tags http://root:$ACCESS_TOKEN@$CI_SERVER_HOST/$CI_PROJECT_PATH.git HEAD:master
+pages:
+  image: ruby:2.7
+  stage: deploy
+  script:
+    - "mv tests/_output/coverage/ public/"
+  artifacts:
+    expire_in: 30 days
+    paths:
+      - public
+  only:
+    - master
 
 deploy:composer:
   stage: deploy
