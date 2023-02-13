@@ -1,6 +1,7 @@
 # urls-rest-api
 
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0-8892BF.svg)](https://php.net/)
+[![coverage report](https://packages.gitlab-pages.nxs360.com/php/spryker/urls-rest-api/badges/master/coverage.svg)](https://packages.gitlab-pages.nxs360.com/php/spryker/urls-rest-api)
 
 # Description
 - Allows/Adds extension for url-resolver plugins [[plugins](Glue/UrlsRestApi/Plugin/UrlResolverPluginInterface.php)]  to /url-resolver endpoint
