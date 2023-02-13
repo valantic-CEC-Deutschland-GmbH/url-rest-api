@@ -13,7 +13,6 @@ tests:coverage:
     - composer cs-check
     - composer md-check
     - composer test
-    - cp tests/_output/coverage.cobertura.xml .
   coverage: '/^\s*Lines:\s*\d+.\d+\%/'
   artifacts:
     expire_in: 30 days
