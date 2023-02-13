@@ -12,6 +12,7 @@ tests:coverage:
     - composer install
     - composer cs-check
     - composer md-check
+    - composer stan
     - composer test
   coverage: '/^\s*Lines:\s*\d+.\d+\%/'
   artifacts:

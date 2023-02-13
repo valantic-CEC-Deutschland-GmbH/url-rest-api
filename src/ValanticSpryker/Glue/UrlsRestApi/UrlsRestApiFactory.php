@@ -27,7 +27,7 @@ class UrlsRestApiFactory extends SprykerUrlsRestApiFactory
     }
 
     /**
-     * @return array<\Pyz\Glue\UrlsRestApi\Plugin\UrlResolverPluginInterface>
+     * @return array<\ValanticSpryker\Glue\UrlsRestApi\Plugin\UrlResolverPluginInterface>
      */
     public function getUrlResolverPlugins(): array
     {
