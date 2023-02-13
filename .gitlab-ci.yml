@@ -12,6 +12,7 @@ composer:validate:
     - composer install
     - composer cs-check
     - composer md-check
+    - composer test
 
 deploy:composer:
   stage: deploy
