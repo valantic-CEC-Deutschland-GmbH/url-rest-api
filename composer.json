@@ -1,6 +1,5 @@
 {
     "name": "valantic-spryker/urls-rest-api",
-    "version": "1.0.0",
     "type": "library",
     "description": "Allows/Adds extension for url-resolver plugins",
     "license": "MIT",
