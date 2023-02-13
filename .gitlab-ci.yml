@@ -25,7 +25,7 @@ stages:
 #      - tests/_output/
 
 release:
-  image: node:12-buster-slim
+  image: node:18
   stage: release
   before_script:
     - apt-get update && apt-get install -y --no-install-recommends git-core ca-certificates
