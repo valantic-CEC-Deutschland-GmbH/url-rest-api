@@ -24,9 +24,9 @@ Fixer: `vendor/bin/phpcbf --standard=phpcs.xml --report=full src/ValanticSpryker
 Disable opcache: `mv /usr/local/etc/php/conf.d/docker-php-ext-opcache.ini /usr/local/etc/php/conf.d/docker-php-ext-opcache.iniold`
 
 XDEBUG:
-- $ip addr | grep '192.'
-- $docker-php-ext-enable xdebug
+- `ip addr | grep '192.'`
+- `$docker-php-ext-enable xdebug`
 - configure phpstorm (add 127.0.0.1 phpstorm server with name valantic)
-- $PHP_IDE_CONFIG=serverName=valantic php -dxdebug.mode=debug -dxdebug.client_host=192.168.87.39 -dxdebug.start_with_request=yes ./vendor/bin/codecept run --env standalone
+- `$PHP_IDE_CONFIG=serverName=valantic php -dxdebug.mode=debug -dxdebug.client_host=192.168.87.39 -dxdebug.start_with_request=yes ./vendor/bin/codecept run --env standalone`
 
 - Run Tests with coverage: `XDEBUG_MODE=coverage vendor/bin/codecept run --env standalone --coverage --coverage-xml --coverage-html`
