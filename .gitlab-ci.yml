@@ -8,7 +8,7 @@ stages:
 tests:coverage:
   stage: validation
   script:
-    - apt update && apt install nodejs
+    - apt-get update && apt-get install -y nodejs && apt-get clean
     - node -v
 #    - composer validate
 #    - composer install
