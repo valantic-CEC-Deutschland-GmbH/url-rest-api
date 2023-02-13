@@ -13,6 +13,7 @@ composer:validate:
     - composer cs-check
     - composer md-check
     - composer test
+  coverage: '/^\s*Lines:\s*\d+.\d+\%/'
 
 deploy:composer:
   stage: deploy
