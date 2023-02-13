@@ -13,19 +13,19 @@ composer:validate:
     - composer cs-check
     - composer md-check
     - composer test
-    - ls tests/_output
     - mv tests/_output/coverage/ public/
-    - cp tests/_output/cobertura.xml .
   coverage: '/^\s*Lines:\s*\d+.\d+\%/'
   artifacts:
     paths:
       - tests/_output/
+      - tests/_output/cobertura.xml
+      - tests/_output/coverage.xml
       - public/
     reports:
       coverage_report:
         coverage_format: cobertura
         path: cobertura.xml
-      junit: tests/_output/coverage.xml
+      junit: coverage.xml
 
 deploy:composer:
   stage: deploy
