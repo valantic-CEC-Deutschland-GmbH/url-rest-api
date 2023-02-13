@@ -14,6 +14,14 @@ composer:validate:
     - composer md-check
     - composer test
   coverage: '/^\s*Lines:\s*\d+.\d+\%/'
+  artifacts:
+    paths:
+      - tests/_output/
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: tests/_output/cobertura.xml
+      junit: tests/_output/coverage.xml
 
 deploy:composer:
   stage: deploy
