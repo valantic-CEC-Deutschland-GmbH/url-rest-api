@@ -14,7 +14,7 @@ use Spryker\Glue\UrlsRestApi\Processor\Url\ResponseBuilder\UrlResponseBuilderInt
 class UrlResolver extends SprykerUrlResolver
 {
     /**
-     * @var array<\Pyz\Glue\UrlsRestApi\Plugin\UrlResolverPluginInterface>
+     * @var array<\ValanticSpryker\Glue\UrlsRestApi\Plugin\UrlResolverPluginInterface>
      */
     private array $urlResolverPlugins;
 

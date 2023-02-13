@@ -50,15 +50,18 @@
     "include-path": [
         "src/"
     ],
-    "require-dev": {
-        "spryker/code-sniffer": "^0.17.18",
-        "spryker-sdk/phpstan-spryker": "^0.4.0",
-        "spryker/architecture-sniffer": "^0.5.7",
-        "spryker/development": "^3.34"
-    },
     "scripts": {
       "cs-fix": "phpcbf --standard=phpcs.xml src",
       "cs-check": "phpcs -s --standard=phpcs.xml --report=full src",
-      "md-check": "phpmd src/ text phpmd-ruleset.xml --minimumpriority 2"
+      "md-check": "phpmd src/ text phpmd-ruleset.xml --minimumpriority 2",
+      "test": "codecept run --env standalone --coverage --coverage-xml --coverage-html --coverage-cobertura"
+    },
+    "require-dev": {
+        "fond-of-codeception/spryker": "^1.0 || ^2.0",
+        "spryker-sdk/phpstan-spryker": "*",
+        "spryker/architecture-sniffer": "*",
+        "spryker/code-sniffer": "*",
+        "spryker/development": "*",
+        "spryker/testify": "*"
     }
 }

@@ -12,6 +12,20 @@ composer:validate:
     - composer install
     - composer cs-check
     - composer md-check
+    - composer test
+    - mv tests/_output/coverage/ public/
+  coverage: '/^\s*Lines:\s*\d+.\d+\%/'
+  artifacts:
+    paths:
+      - tests/_output/
+      - tests/_output/cobertura.xml
+      - tests/_output/coverage.xml
+      - public/
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: tests/_output/cobertura.xml
+      junit: tests/_output/coverage.xml
 
 deploy:composer:
   stage: deploy
@@ -34,3 +48,4 @@ deploy:composer:
     - if: $CI_MERGE_REQUEST_ID
       when: never
     - if: $CI_COMMIT_TAG =~ /^?[0-9]+[.][0-9]+([.][0-9]+)?$/
+
