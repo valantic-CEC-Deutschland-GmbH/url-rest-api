@@ -5,7 +5,7 @@ stages:
   - deploy
   - post-test
 
-composer:validate:
+tests:coverage:
   stage: validation
   script:
     - composer validate
@@ -18,11 +18,6 @@ composer:validate:
     expire_in: 30 days
     paths:
       - tests/_output/
-    reports:
-      coverage_report:
-        coverage_format: cobertura
-        path: tests/_output/cobertura.xml
-      junit: tests/_output/coverage.xml
 
 pages:
   image: ruby:2.7
