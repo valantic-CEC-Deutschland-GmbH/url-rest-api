@@ -13,13 +13,10 @@ composer:validate:
     - composer cs-check
     - composer md-check
     - composer test
-    - mv tests/_output/coverage/ public/
   coverage: '/^\s*Lines:\s*\d+.\d+\%/'
   artifacts:
     paths:
       - tests/_output/
-      - tests/_output/cobertura.xml
-      - tests/_output/coverage.xml
       - public/
     reports:
       coverage_report:
