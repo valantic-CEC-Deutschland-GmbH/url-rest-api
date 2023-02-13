@@ -35,17 +35,17 @@ release:
 #  rules:
 #    - if: $CI_COMMIT_BRANCH == "master"
 
-pages:
-  image: ruby:2.7
-  stage: deploy
-  script:
-    - "mv tests/_output/coverage/ public/"
-  artifacts:
-    expire_in: 30 days
-    paths:
-      - public
-  only:
-    - master
+#pages:
+#  image: ruby:2.7
+#  stage: deploy
+#  script:
+#    - "mv tests/_output/coverage/ public/"
+#  artifacts:
+#    expire_in: 30 days
+#    paths:
+#      - public
+#  only:
+#    - master
 
 #tagging:
 ##  only:
