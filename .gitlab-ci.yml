@@ -4,13 +4,14 @@ stages:
   - validation
   - deploy
   - post-test
+  - release
 
 tests:coverage:
   stage: validation
   script:
-    - apt-get update && apt-get install -y nodejs && apt-get clean
-    - node -v
-    - npm -v
+#    - apt-get update && apt-get install -y nodejs && apt-get clean
+#    - node -v
+#    - npm -v
 #    - composer validate
 #    - composer install
 #    - composer cs-check
@@ -22,6 +23,17 @@ tests:coverage:
     expire_in: 30 days
     paths:
       - tests/_output/
+
+release:
+  image: node:12-buster-slim
+  stage: release
+  before_script:
+    - apt-get update && apt-get install -y --no-install-recommends git-core ca-certificates
+    - npm install -g semantic-release @semantic-release/gitlab
+  script:
+    - semantic-release
+#  rules:
+#    - if: $CI_COMMIT_BRANCH == "master"
 
 pages:
   image: ruby:2.7
