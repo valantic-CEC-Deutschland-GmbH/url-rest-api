@@ -1,4 +1,4 @@
-namespace: ValanticSpryker/urls-rest-api
+namespace: ValanticSpryker
 
 suites:
   unit:
@@ -19,7 +19,7 @@ paths:
 coverage:
   enabled: true
   include:
-    - src/FondOfSpryker/*.php
+    - src/ValanticSpryker/*.php
 
 modules:
   enabled:
