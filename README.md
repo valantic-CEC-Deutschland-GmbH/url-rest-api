@@ -5,7 +5,7 @@
 [![coverage report](https://gitlab.nxs360.com/packages/php/spryker/urls-rest-api/badges/master/coverage.svg)](https://packages.gitlab-pages.nxs360.com/php/spryker/urls-rest-api)
 
 # Description
-- Allows/Adds extension for url-resolver plugins [[plugins](Glue/UrlsRestApi/Plugin/UrlResolverPluginInterface.php)]  to /url-resolver endpoint
+- Extends spryker url-resolver and allows additional url-resolver sources via plugins [[plugins](Glue/UrlsRestApi/Plugin/UrlResolverPluginInterface.php)]  to /url-resolver endpoint
 
 # Install
 - https://gitlab.nxs360.com/groups/packages/php/spryker/-/packages
