@@ -8,11 +8,10 @@ stages:
 composer:validate:
   stage: validation
   script:
-#    - composer validate
-#    - composer install
-#    - composer cs-check
-#    - composer md-check
-    - docker-php-ext-enable xdebug
+    - composer validate
+    - composer install
+    - composer cs-check
+    - composer md-check
     - composer test
 
 deploy:composer:

@@ -54,7 +54,7 @@
       "cs-fix": "phpcbf --standard=phpcs.xml src",
       "cs-check": "phpcs -s --standard=phpcs.xml --report=full src",
       "md-check": "phpmd src/ text phpmd-ruleset.xml --minimumpriority 2",
-      "test": "codecept run --env standalone"
+      "test": "codecept run --env standalone --coverage --coverage-xml --coverage-html"
     },
     "require-dev": {
         "fond-of-codeception/spryker": "^1.0 || ^2.0",
