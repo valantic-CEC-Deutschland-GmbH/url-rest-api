@@ -6,9 +6,9 @@ stages:
   - post-test
   - release
 
-tests:coverage:
-  stage: validation
-  script:
+#tests:coverage:
+#  stage: validation
+#  script:
 #    - apt-get update && apt-get install -y nodejs && apt-get clean
 #    - node -v
 #    - npm -v
@@ -18,11 +18,11 @@ tests:coverage:
 #    - composer md-check
 #    - composer test
 #    - composer stan
-  coverage: '/^\s*Lines:\s*\d+.\d+\%/'
-  artifacts:
-    expire_in: 30 days
-    paths:
-      - tests/_output/
+#  coverage: '/^\s*Lines:\s*\d+.\d+\%/'
+#  artifacts:
+#    expire_in: 30 days
+#    paths:
+#      - tests/_output/
 
 release:
   image: node:12-buster-slim
