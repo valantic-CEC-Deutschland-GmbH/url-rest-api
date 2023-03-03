@@ -60,10 +60,9 @@ class UrlResolver extends SprykerUrlResolver
 
         foreach ($this->urlResolverPlugins as $resolverPlugin) {
             $restUrlResolverAttributesTransfer = $resolverPlugin->resolve($restRequest);
-        }
-
-        if ($restUrlResolverAttributesTransfer->getEntityType() !== null) {
-            return $this->urlResponseBuilder->createUrlResolverResourceResponse($restUrlResolverAttributesTransfer);
+            if ($restUrlResolverAttributesTransfer->getEntityType() !== null) {
+                return $this->urlResponseBuilder->createUrlResolverResourceResponse($restUrlResolverAttributesTransfer);
+            }
         }
 
         return null;
