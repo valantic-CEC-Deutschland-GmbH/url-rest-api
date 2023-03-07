@@ -2,5 +2,5 @@ image: registry.gitlab.nxs360.com/docker/php:8.1-cli
 
 include:
   - project: packages/gitlab-templates/ci-cd-template-spryker-composer-package
-    ref: master
+    ref: main
     file: .gitlab-ci.yml
