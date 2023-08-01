@@ -1,5 +1,5 @@
 {
-    "name": "valantic-cec/urls-rest-api",
+    "name": "valantic-spryker/urls-rest-api",
     "type": "library",
     "description": "Allows/Adds extension for url-resolver plugins",
     "license": "proprietary",
