@@ -6,10 +6,7 @@
 - Extends spryker url-resolver and allows additional url-resolver sources via plugins [[plugins](Glue/UrlsRestApi/Plugin/UrlResolverPluginInterface.php)]  to /url-resolver endpoint
 
 # Install
-- `composer require valantic-cec/urls-rest-api`
-
-# Reference implementation
-- https://gitlab.nxs360.com/team-lr/glue-api
+- `composer require valantic-spryker/urls-rest-api`
 
 # HowTos
 
