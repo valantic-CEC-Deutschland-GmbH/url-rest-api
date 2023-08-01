@@ -2,7 +2,7 @@
     "name": "valantic-cec/urls-rest-api",
     "type": "library",
     "description": "Allows/Adds extension for url-resolver plugins",
-    "license": "MIT",
+    "license": "proprietary",
     "require": {
         "php": ">=8.0",
         "spryker/urls-rest-api": ">=1.0.0"
