@@ -1,14 +1,12 @@
 # urls-rest-api
 
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0-8892BF.svg)](https://php.net/)
-[![coverage report](https://gitlab.nxs360.com/packages/php/spryker/urls-rest-api/badges/master/pipeline.svg)](https://gitlab.nxs360.com/packages/php/spryker/urls-rest-api/-/pipelines?page=1&scope=all&ref=master)
-[![coverage report](https://gitlab.nxs360.com/packages/php/spryker/urls-rest-api/badges/master/coverage.svg)](https://packages.gitlab-pages.nxs360.com/php/spryker/urls-rest-api)
 
 # Description
 - Extends spryker url-resolver and allows additional url-resolver sources via plugins [[plugins](Glue/UrlsRestApi/Plugin/UrlResolverPluginInterface.php)]  to /url-resolver endpoint
 
 # Install
-- https://gitlab.nxs360.com/groups/packages/php/spryker/-/packages
+- `composer require valantic-cec/urls-rest-api`
 
 # Reference implementation
 - https://gitlab.nxs360.com/team-lr/glue-api
